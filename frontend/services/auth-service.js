@@ -1,7 +1,7 @@
 const jwtDecode = require('jwt-decode');
 const axios = require('axios');
 const url = require('url');
-const envVariables = require('../env-variables');
+const envVariables = require('../env-variables.json');
 const keytar = require('keytar');
 const os = require('os');
 

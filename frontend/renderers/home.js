@@ -10,6 +10,7 @@ webContents.on('dom-ready', () => {
   document.getElementById('picture').src = profile.picture;
   document.getElementById('name').innerText = profile.name;
   document.getElementById('success').innerText = 'You successfully used OpenID Connect and OAuth 2.0 to authenticate.';
+  console.log(profile);
 });
 
 document.getElementById('logout').onclick = () => {
@@ -26,6 +27,7 @@ document.getElementById('secured-request').onclick = () => {
     const messageJumbotron = document.getElementById('message');
     messageJumbotron.innerText = response.data;
     messageJumbotron.style.display = 'block';
+    console.log(response);
   }).catch((error) => {
     if (error) throw new Error(error);
   });
